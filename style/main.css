@@ -1,0 +1,137 @@
+:root{
+     --ff-main: 'Roboto', sans-serif;
+     --bg-col: #000000;
+     --fg-col:#ffffff;
+     --smooth: orangered
+}
+*{
+     margin:0;
+     padding-bottom:0;
+     box-sizing: border-box;
+     
+     outline-color: var(--smooth);
+}
+
+.container{
+     font-family: var(--ff-main);
+     font-size: 30px;
+     position: relative;
+     height: 100vh;
+     overflow-x:hidden;
+     /* background-color:var(--bg-col); */
+}
+
+/* -----------------------------------NAVBAR---------------------------- */
+.navbar{
+     width: 100%;
+}
+.navbar-main{
+     width: 100%;
+     display:flex;
+     justify-content: space-between;
+     list-style-type: none;
+     padding:1em;
+     background:var(--fg-col);
+}
+.navbar-home{
+     width: calc(50px,70px,100px);
+
+     position: relative;
+     display: flex;
+     align-content: center;
+     justify-content: center;
+}
+.navbar-home-inside, 
+.navbar-home-inside h5{
+     display: flex;
+     align-content: center;
+     justify-content: center;
+}
+.navlink p{
+     display: flex;
+     padding:1em 1em 1em 0em;
+     
+}
+
+.navbar-list{
+     list-style-type: none;
+     display:flex;
+}
+.nav-option{
+     padding:1em;
+}
+
+.brand{
+     width: max(70px,90px);
+     height: 90px;
+     display: block;
+     margin-right: .5em;
+}
+.toggler{
+     display: none;
+}
+
+.content{
+     padding:3em;
+     background-color: var(--bg-col);
+     color:white;
+}
+@media (max-width:940px){
+     :root{
+          --brand-toggler-size: max(70px,90px);
+          --navbar-height: max(150px,15vh);
+     }
+     .navbar{
+          height: var(--navbar-height);
+     }
+     .brand{
+          width: var(--brand-toggler-size);
+          height: auto;
+          display: block;
+}
+     .navbar-list{
+          position: fixed;
+          right:-100vw;
+          top:0;
+          text-align: center;
+          font-size: max(20px,8vh);
+          width: 100vw;
+          padding:0;
+          height: 100vh;
+          display:flex;
+          flex-direction: column;
+          justify-content: space-around;
+          height: 100%;
+          background-color: orchid;
+     }
+     .nav-option{
+          padding-top:1em;
+          padding-bottom:1em;
+     }
+     .navlink p{
+          display: none;
+     }
+     .toggler{
+     width: max(15px,30vw);
+     display: block;
+     position: absolute;
+     right:1em;
+     z-index:100;
+     width: var(--brand-toggler-size);
+     height: var(--brand-toggler-size);
+     }
+     .toggler-enabled{
+          overflow:hidden;
+          height: 100%;
+     }
+}
+
+
+a{
+     text-decoration: none;
+     color:var(--bg-col);
+     font-weight: 900;
+}
+
+
+
