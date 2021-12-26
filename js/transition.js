@@ -9,7 +9,9 @@ window.onload = ()=>{
           link.addEventListener("click",(e)=>{
                e.preventDefault();
                let target = e.target.href;
-               console.log(target)
+               if(typeof target != "string"){
+                    target = link.href;
+               }
                transition_en.classList.add("is-active");
                setTimeout(()=>{
                     window.location.href = target;
@@ -17,3 +19,5 @@ window.onload = ()=>{
           })
      }
 }
+
+
