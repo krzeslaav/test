@@ -26,6 +26,7 @@
 .navbar{
      width: 100%;
      position: fixed;
+     transition: .3s ease-out;
 }
 .navbar-main{
      width: 100%;
@@ -74,7 +75,9 @@
 .toggler{
      display: none;
 }
-
+.scroll-down{
+     transform: translate(0,-100%);
+}
 
 @media (max-width:940px){
      :root{
