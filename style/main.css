@@ -2,7 +2,8 @@
      --ff-main: 'Roboto', sans-serif;
      --bg-col: #000000;
      --fg-col:#ffffff;
-     --accent: orangered;
+     --accent: rgb(189, 55, 55);
+     --navbar-col:rgba(0, 0, 0, 0.7);
 }
 *{
      margin:0;
@@ -103,12 +104,19 @@
           flex-direction: column;
           justify-content: space-around;
           height: 100%;
-          background-color: orchid;
+          background:var(--navbar-col) ;
+          backdrop-filter: blur(10px);
+          /* (0,0% 100% / 0.1) */
           transition: .5s ease-in;
      }
      .nav-option{
           padding-top:1em;
           padding-bottom:1em;
+          
+     }
+     .navlink{
+          color:var(--fg-col);
+          text-shadow: 0px -1px 15px rgb(20, 20, 20);
      }
      .navlink p{
           display: none;
