@@ -18,7 +18,6 @@
      font-family: var(--ff-main);
      font-size: 30px;
      position: relative;
-     height: 100vh;
      overflow-x:hidden;
      /* background-color:var(--bg-col); */
 }
@@ -26,18 +25,20 @@
 /* -----------------------------------NAVBAR---------------------------- */
 .navbar{
      width: 100%;
+     position: fixed;
 }
 .navbar-main{
      width: 100%;
      display:flex;
      justify-content: space-between;
      list-style-type: none;
-     padding:1em;
+     padding:clamp(15px,1em,40px);
      background:var(--fg-col);
+  
 }
 .navbar-home{
      width: calc(50px,70px,100px);
-
+   border:1px solid purple;
      position: relative;
      display: flex;
      align-content: center;
@@ -56,6 +57,7 @@
 }
 
 .navbar-list{
+     
      list-style-type: none;
      display:flex;
 }
@@ -73,15 +75,11 @@
      display: none;
 }
 
-.content{
-     padding:3em;
-     background-color: var(--bg-col);
-     color:white;
-}
+
 @media (max-width:940px){
      :root{
-          --brand-toggler-size: max(70px,90px);
-          --navbar-height: max(150px,15vh);
+          --brand-toggler-size: max(60px,85px);
+          --navbar-height: 150px;
      }
      .navbar{
           height: var(--navbar-height);
@@ -112,7 +110,6 @@
      .nav-option{
           padding-top:1em;
           padding-bottom:1em;
-          
      }
      .navlink{
           color:var(--fg-col);
@@ -137,8 +134,8 @@
 }
 /* =============== MAIN SCREEN============ */
 .main-screen{
+     margin-top:150px;
      background-color: var(--fg-col);
-    
      display: flex;
      justify-content: center;
      align-items: center;
@@ -151,11 +148,15 @@ a{
      font-weight: 900;
 }
 
-
+.content{
+     padding:3em;
+     background-color: var(--bg-col);
+     color:white;
+}
 
 .img-content{
      display: block;
      width:clamp(90px, 90vw,600px) ;
      height: auto;
-     padding:.5em;
+     padding:.25em;
 }
