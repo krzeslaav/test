@@ -19,6 +19,7 @@
 }
 .transition.is-active{
      left: 0px;
+     /* update */
      /* font-size: 3em; */
      /* display: flex; */
 }
