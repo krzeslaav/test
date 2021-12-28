@@ -4,6 +4,7 @@
      --fg-col:#ffffff;
      --accent: rgb(189, 55, 55);
      --navbar-col:rgba(0, 0, 0, 0.7);
+     
 }
 *{
      margin:0;
@@ -35,11 +36,9 @@
      list-style-type: none;
      padding:clamp(15px,1em,40px);
      background:var(--fg-col);
-  
 }
 .navbar-home{
      width: calc(50px,70px,100px);
-   border:1px solid purple;
      position: relative;
      display: flex;
      align-content: center;
@@ -80,7 +79,7 @@
      transform: translate(0,-100%);
 }
 
-@media (max-width:940px){
+@media (max-width:1010px){
      :root{
           --brand-toggler-size: max(60px,85px);
           --navbar-height: 150px;
@@ -111,9 +110,21 @@
           /* (0,0% 100% / 0.1) */
           transition: .5s ease-in;
      }
+     .navbar-main{
+          padding:clamp(15px,.8em,20px);
+     }
      .nav-option{
           padding-top:1em;
           padding-bottom:1em;
+     }
+     .nav-optionx{
+          display: block;
+          position: fixed;
+          right:0;  
+          bottom:0;
+          padding:0;
+          width: var(--brand-toggler-size) ;
+          height:var(--brand-toggler-size);
      }
      .navlink{
           color:var(--fg-col);
@@ -123,27 +134,45 @@
           display: none;
      }
      .toggler{
-     width: max(15px,30vw);
-     display: block;
-     position: absolute;
-     right:1em;
-     z-index:100;
-     width: var(--brand-toggler-size);
-     height: var(--brand-toggler-size);
+          display: block;
+          position: absolute;
+          right:1em;
+          z-index:100;
+          width: var(--brand-toggler-size);
+          height: var(--brand-toggler-size);
      }
      .toggler-enabled{
           overflow:hidden;
           height: 100%;
      }
 }
+.nav-optionx{
+     padding:0px;
+}
+.styl {
+     display: block;
+     border: none;
+     background-color: transparent;
+     padding:none
+     
+}
+.styl img{
+     width: auto;
+     height: 90px;
+}
+.styl img:hover{
+     
+     cursor:pointer;
+}
 /* =============== MAIN SCREEN============ */
 .main-screen{
      margin-top:150px;
      background-color: var(--fg-col);
-     display: flex;
+     
      justify-content: center;
      align-items: center;
-     padding:2em;
+     padding:1em;
+     font-size: clamp(15px,8vw,50px);
 }
 
 a{
