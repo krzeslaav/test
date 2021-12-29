@@ -9,6 +9,7 @@ function check_size() {
           navbar_list.style.right = "-100vw"; 
           removeEventListener("resize",check_size)
           toggler.classList.remove("toggler-enabled");
+          document.querySelector(".menu-btn").classList.remove("open")
           // toggler.style.display = "none";
      }
      
@@ -18,11 +19,15 @@ toggler.addEventListener("click",()=>{
      if(navbar_list.style.right == '0px'){
           navbar_list.style.right = "-100vw";  
           body.classList.remove("toggler-enabled");
+          document.querySelector(".menu-btn").classList.remove("open")
+
           // toggler.style.display = "none";
 
      } else{ 
           navbar_list.style.right = "0";
           body.classList.add("toggler-enabled");
+          document.querySelector(".menu-btn").classList.add("open")
+
           // style_change.style.display = "block";
           window.addEventListener("resize",check_size);
           // toggler.style.display = "none";
