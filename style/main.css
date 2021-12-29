@@ -38,7 +38,7 @@
      display:flex;
      justify-content: space-between;
      list-style-type: none;
-     padding:clamp(15px,1em,40px);
+     padding:clamp(15px,5vw,40px);
      background:var(--fg-col);
      -webkit-box-shadow: 0px 7px 24px -17px rgba(66, 68, 90, 1);
      -moz-box-shadow: 0px 7px 24px -17px rgba(66, 68, 90, 1);
@@ -81,7 +81,7 @@
 }
 .nav-option{
      padding:.5em;
-     height: 2em;
+     height: 1.5em;
      position: relative;
      margin:.5em;
      /* margin-right: .15em; */
@@ -89,8 +89,8 @@
 }
 
 .brand{
-     width: max(70px,90px);
-     height: 90px;
+     width: max(60px,70px);
+     height: 60px;
      display: block;
      margin-right: .5em;
      color:var(--bg-col);
@@ -104,7 +104,7 @@
 
 @media (max-width:1010px){
      :root{
-          --brand-toggler-size: max(60px,85px);
+          --brand-toggler-size: max(30px,50px);
           --navbar-height: 150px;
      }
      .navbar{
