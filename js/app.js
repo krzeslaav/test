@@ -49,15 +49,16 @@ window.addEventListener("scroll",()=>{
      }
      lastScroll = currentScroll;
 })
+//CHANGE CSS COLOURS
 let tryb = 0;
 btnCss.addEventListener("click",(e)=>{
      if(tryb ==0){
-          console.log("zmiana na darkmode (musze zrobić go najpier)")
+          document.getElementById("page_colors").setAttribute("href","./style/mode_side.css")
           document.getElementById("switch").setAttribute("src","./media/off.png")
           tryb = 1;
          
      } else{
-          console.log("zmiana lightmode (musze no najpierw zrobic)")
+          document.getElementById("page_colors").setAttribute("href","./style/mode_main.css")
           document.getElementById("switch").setAttribute("src","./media/on.png")
           tryb = 0;
 

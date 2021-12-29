@@ -1,0 +1,11 @@
+/* DARKMODE CSS MODE\COLOURS*/
+:root{
+     --fg-col:#365ee0;
+     --bg-col: #white;
+     --accent: rgb(189, 55, 55);
+     --navbar-col:rgba(0, 0, 0, 0.7);
+     --fc-side: white;
+}
+section{
+     background:var(--navbar-col   );
+}

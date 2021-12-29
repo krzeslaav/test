@@ -1,26 +1,24 @@
 :root{
      --ff-main: 'Roboto', sans-serif;
-     --bg-col: #000000;
-     --fg-col:#ffffff;
-     --accent: rgb(189, 55, 55);
-     --navbar-col:rgba(0, 0, 0, 0.7);
-     
 }
 *{
      margin:0;
      padding-bottom:0;
      box-sizing: border-box;
-     
-     outline-color: var(--accent);
-     outline-offset: .25em;
+     caret-color: transparent;
 }
+*::selection{
+     background-color: var(--accent);
+     color:var(--fg-col);
+}
+
 
 .container{
      font-family: var(--ff-main);
      font-size: 30px;
      position: relative;
      overflow-x:hidden;
-     /* background-color:var(--bg-col); */
+     background-color:var(--fg-col);
 }
 
 /* -----------------------------------NAVBAR---------------------------- */
@@ -50,9 +48,19 @@
      align-content: center;
      justify-content: center;
 }
+.navlink{
+     color:var(--fc-side);
+}
+.nav-option >.navlink:hover{
+     transition:  ease-in;
+     border-bottom-style:solid;
+     border-color:var(--accent);
+     color:var(--bg-col);
+}
 /* update */
 .navlink p{
      display: flex;
+     color:var(--bg-col);
      padding:1em 1em 1em 0em;
      
 }
@@ -63,7 +71,12 @@
      display:flex;
 }
 .nav-option{
-     padding:1em;
+     padding:.5em;
+     height: 2em;
+     position: relative;
+     margin:.5em;
+     /* margin-right: .15em; */
+     
 }
 
 .brand{
@@ -71,6 +84,7 @@
      height: 90px;
      display: block;
      margin-right: .5em;
+     color:var(--bg-col);
 }
 .toggler{
      display: none;
