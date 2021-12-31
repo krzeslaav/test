@@ -180,8 +180,11 @@
           height: 100%;
      }
      #switch{
-          height: 150px;
-
+               padding:0;
+               margin:0;
+               right:0;
+               bottom:100px;
+              height: 100px;
      }
 }
 .nav-optionx{
@@ -317,6 +320,100 @@ a{
      background-color: var(--bg-col);
      color:white;
 }
+.cards{
+     margin-top:1em;
+     margin-bottom: 1em;
+     position: relative;
+     background-color: white;
+     display: flex;
+     justify-content: center;
+}
+
+.arr-left,
+.arr-right{
+     width: 2em;
+     border-radius: 50%;
+     background-color:black;
+     border:1px solid purple;
+     z-index: 70;
+     top:50%;
+     transform: translate(0,-50%);
+     position: absolute;
+}
+.arr-left::after,
+.arr-right::after{
+     content:"";
+     padding-bottom: 100%;
+     display: block;
+}
+
+
+.arr-left{
+     left:10%;
+}
+.arr-right{
+     right:10%;
+}
+
+.arr-right-in,
+.arr-left-in{
+     color:white;
+     position: absolute;
+     top:50%;
+     left:50%;
+     transform: translate(-50%,-50%);
+     padding: 0;
+}
+.arr-left-in button,
+.arr-right-in button{
+     color:white;
+     background-color: transparent;
+     border:none;
+     font-size: 1em;
+     font-weight: 900;
+}
+.card{
+     /* padding:1em; */
+     position: relative;
+     height: 70vh;
+     max-height: 600px;
+     width: 60vw;
+     max-width: 550px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     /* border:1px solid purple; */
+}
+.img_card{
+     display: block;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     border-radius: 30px;
+     object-fit: cover;
+     z-index: 40;
+}
+.card-description{
+     position: relative;
+     text-align: center;
+     /* font-size: 25px; */
+     font-size: clamp(8px,5vw,15px);
+     line-height: 1.5em;
+     z-index: 50;
+     color:white;
+     opacity: .8;
+}
+.card-author{
+     margin:10px;   
+     z-index: 50;
+     position: relative;
+     /* background-color: orange; */
+     color:var(--fc-side);
+     font-weight: bolder;
+     font-size: .8em;
+}
+
+
 
 .img-content{
      display: block;
