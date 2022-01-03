@@ -334,7 +334,7 @@ a{
      width: 2em;
      border-radius: 50%;
      background-color:black;
-     border:1px solid purple;
+     
      z-index: 70;
      top:50%;
      transform: translate(0,-50%);
@@ -372,6 +372,12 @@ a{
      font-size: 1em;
      font-weight: 900;
 }
+.arr-left:active,
+.arr-right:active{
+     background-color: var(--accent);
+}
+
+
 .card{
      /* padding:1em; */
      position: relative;
@@ -402,6 +408,9 @@ a{
      z-index: 50;
      color:white;
      opacity: .8;
+}
+.d_none{
+     display: none;
 }
 .card-author{
      margin:10px;   

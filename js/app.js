@@ -67,3 +67,47 @@ btnCss.addEventListener("click",(e)=>{
      }
 })
 //update
+
+//CARD SWITCHER
+const arrLeft = document.querySelector(".arr-left")
+const arrRight = document.querySelector(".arr-right")
+const cards = document.querySelectorAll(".card")
+arrLeft.addEventListener("click",()=>{
+     let card = document.querySelector(".card");
+
+          let currentCard = card.classList[1];
+
+          let regex = /\d+/g;
+          let matches = currentCard.match(regex);
+          currentCard= parseInt(matches[0])
+          currentCard--
+          console.log(currentCard)
+          if(currentCard<0){
+               currentCard = parseInt(cards.length)-1;
+          }
+          console.log(currentCard,"nr karty")
+          card.classList.add("d_none");
+          
+          cards[currentCard].classList.remove("d_none")
+          // console.log(cards[currentCard].classList) 
+         
+})
+
+arrRight.addEventListener("click",()=>{
+     console.log("rigt")
+     let card = document.querySelector(".card");
+     if(!card.classList.contains("d_none")){
+          
+          let currentCard = card.classList[1];
+
+          let regex = /\d+/g;
+          let matches = currentCard.match(regex);
+          currentCard= parseInt(matches[0])
+          currentCard++
+          card.classList.add("d_none");
+          
+          cards[currentCard].classList.remove("d_none")
+          console.log(cards[currentCard].classList) 
+         }
+})
+
