@@ -111,82 +111,63 @@
      transform: translate(0,-100%);
 }
 
-@media (max-width:1010px){
-     :root{
-          --brand-toggler-size: max(30px,50px);
-          --navbar-height: 150px;
-     }
-     .navbar{
-          height: var(--navbar-height);
-     }
-     .brand{
-          width: var(--brand-toggler-size);
-          height: auto;
-          display: block;
+
+
+
+
+.arr-left,
+.arr-right{
+     width: 2em;
+     border-radius: 50%;
+     background-color:black;
+     
+     z-index: 70;
+     top:50%;
+     transform: translate(0,-50%);
+     position: absolute;
 }
-     .navbar-list{
-          position: fixed;
-          right:-100vw;
-          top:0;
-          text-align: center;
-          font-size: max(20px,8vh);
-          width: 100vw;
-          padding:0;
-          height: 100vh;
-          display:flex;
-          flex-direction: column;
-          justify-content: space-around;
-          height: 100%;
-          background:var(--navbar-col) ;
-          backdrop-filter: blur(10px);
-          /* (0,0% 100% / 0.1) */
-          transition: .5s ease-in;
-          z-index: 99999;
-     }
-     .navbar-main{
-          padding:clamp(15px,.8em,20px);
-     }
-     .nav-option{
-          padding-top:1em;
-          padding-bottom:1em;
-          font-size: 1em;
-     }
-     .nav-optionx{
-          display: block;
-          position: fixed;
-          right:0;  
-          bottom:0;
-          padding:0;
-          width: var(--brand-toggler-size) ;
-          height:var(--brand-toggler-size);
-     }
-     .navlink{
-          color:var(--fg-col);
-          text-shadow: 0px -1px 15px rgb(20, 20, 20);
-     }
-     .navlink p{
-          display: none;
-     }
-     .toggler{
-          display: block;
-          position: absolute;
-          right:1em;
-          z-index:99999;
-          width: var(--brand-toggler-size);
-          height: var(--brand-toggler-size);
-     }
-     .toggler-enabled{
-          overflow:hidden;
-          height: 100%;
-     }
-     #switch{
-               padding:0;
-               margin:0;
-               right:0;
-               bottom:100px;
-              height: 100px;
-     }
+.arr-left::after,
+.arr-right::after{
+     content:"";
+     padding-bottom: 100%;
+     display: block;
 }
+
+
+.arr-left{
+     left:10%;
+}
+.arr-right{
+     right:10%;
+}
+
+.arr-right-in,
+.arr-left-in{
+     color:white;
+     position: absolute;
+     top:50%;
+     left:50%;
+     transform: translate(-50%,-50%);
+     padding: 0;
+}
+.arr-left-in button,
+.arr-right-in button{
+     color:white;
+     background-color: transparent;
+     border:none;
+     font-size: 1em;
+     font-weight: 900;
+}
+.arr-left:active,
+.arr-right:active{
+     background-color: var(--accent);
+}
+
+
+
+
+
+
 .nav-optionx{
      padding:0px;
 }
@@ -321,60 +302,15 @@ a{
      color:white;
 }
 .cards{
-     margin-top:1em;
-     margin-bottom: 1em;
+     
+     /* margin-top:1em; */
+     /* margin-bottom: 1em; */
+     padding:1em;
      position: relative;
-     background-color: white;
+     background-color: #e72d52;
      display: flex;
      justify-content: center;
-}
-
-.arr-left,
-.arr-right{
-     width: 2em;
-     border-radius: 50%;
-     background-color:black;
-     
-     z-index: 70;
-     top:50%;
-     transform: translate(0,-50%);
-     position: absolute;
-}
-.arr-left::after,
-.arr-right::after{
-     content:"";
-     padding-bottom: 100%;
-     display: block;
-}
-
-
-.arr-left{
-     left:10%;
-}
-.arr-right{
-     right:10%;
-}
-
-.arr-right-in,
-.arr-left-in{
-     color:white;
-     position: absolute;
-     top:50%;
-     left:50%;
-     transform: translate(-50%,-50%);
-     padding: 0;
-}
-.arr-left-in button,
-.arr-right-in button{
-     color:white;
-     background-color: transparent;
-     border:none;
-     font-size: 1em;
-     font-weight: 900;
-}
-.arr-left:active,
-.arr-right:active{
-     background-color: var(--accent);
+     transition: .2s;
 }
 
 
@@ -388,6 +324,7 @@ a{
      display: flex;
      align-items: center;
      flex-direction: column;
+     transition: :.3s ease-in;
      /* border:1px solid purple; */
 }
 .img_card{
@@ -429,4 +366,93 @@ a{
      width:clamp(90px, 90vw,600px) ;
      height: auto;
      padding:.25em;
+}
+
+
+
+@media (max-width:1010px){
+     :root{
+          --brand-toggler-size: max(30px,50px);
+          --navbar-height: 150px;
+     }
+     .navbar{
+          height: var(--navbar-height);
+     }
+     .brand{
+          width: var(--brand-toggler-size);
+          height: auto;
+          display: block;
+}
+     .navbar-list{
+          position: fixed;
+          right:-100vw;
+          top:0;
+          text-align: center;
+          font-size: max(20px,8vh);
+          width: 100vw;
+          padding:0;
+          height: 100vh;
+          display:flex;
+          flex-direction: column;
+          justify-content: space-around;
+          height: 100%;
+          background:var(--navbar-col) ;
+          backdrop-filter: blur(10px);
+          /* (0,0% 100% / 0.1) */
+          transition: .5s ease-in;
+          z-index: 99999;
+     }
+     .navbar-main{
+          padding:clamp(15px,.8em,20px);
+     }
+     .nav-option{
+          padding-top:1em;
+          padding-bottom:1em;
+          font-size: 1em;
+     }
+     .nav-optionx{
+          display: block;
+          position: fixed;
+          right:0;  
+          bottom:0;
+          padding:0;
+          width: var(--brand-toggler-size) ;
+          height:var(--brand-toggler-size);
+     }
+     .navlink{
+          color:var(--fg-col);
+          text-shadow: 0px -1px 15px rgb(20, 20, 20);
+     }
+     .navlink p{
+          display: none;
+     }
+     .toggler{
+          display: block;
+          position: absolute;
+          right:1em;
+          z-index:99999;
+          width: var(--brand-toggler-size);
+          height: var(--brand-toggler-size);
+     }
+     .toggler-enabled{
+          overflow:hidden;
+          height: 100%;
+     }
+     #switch{
+               padding:0;
+               margin:0;
+               right:0;
+               bottom:100px;
+              height: 100px;
+     }
+     /* --------------------------- */
+     .arr-left{
+          left:1em;
+     }
+     .arr-right{
+          right: 1em;
+     }
+     .card{
+          width: 100%;
+     }
 }

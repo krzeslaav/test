@@ -1,0 +1,148 @@
+LATEX NOTATKI:
+
+STRUKTURA =>
+          \part - podział na części np książek (dostepne w raport i book)
+          \chapter - rozdział (dostepne w raport i book)
+          \section - sekcja np 1,2,3
+          \subsection - podsekcja np 1.1, 2.4, 3.7
+          \subsubsection - np 1.1.1, 2.1.6, 7.4.3
+          \paragrath - akapit
+          \subparagrath - podaakapit
+               
+
+ZMIANA CZCIONKI CAŁOŚCI =>
+               \documentclass[10pt]{article\report\book}
+                         zmienia czcionke na 10pt
+STRESZCZENIE =>
+               \begin{abstract}
+                    asdasd - streszczenie
+               \end{abstract}
+
+DODANIE STOPKI/NAGŁÓWKA=>
+          \pagestyle{empty\headings}
+
+WŁASNE MAKRO => \newcommand{\TWOJE_MAKRO}{\CO_MA_ROBIĆ}
+               \newcommand{\NN}{\mathbb{N}} - tworzy literke zbioru liczb naturalnych
+               \newcommand{\CC}{\mathbb{C}} - tworzy literke zbioru liczb zespolonych
+               \newcommand{\ZZ}{\mathbb{Z}} - tworzy literke zbioru liczb całkowitych
+               itd
+               aby użyć wpisujemy $ n \in \CC $  - n nalezy do zbioru zespolonych
+
+DEKLARACJE AUTORKIE =>
+               \date{podaj date}
+               \author{podaj autora}
+               \title{podaj tytuł}
+
+UTWÓRZ TYTUŁ Z DANYMI POWYŻEJ =>
+               \maketitle
+
+UTWÓRZ NOWĄ STRONĘ =>
+               \newpage
+
+MATEMATYCZNE ZNAKI =>
+               GRUPOWANIE ZNAKÓW - używaj gdy chcesz wpisać wiele symboli do np potęgi
+                    \x^2+3 => \x^{2+3}
+               -----------------------
+          \sqrt{x} - pierwiastek z x
+          \frac{x}{y} - ułamek x/y
+          x^y - x do potęgi y
+          x_{11} - x o indeksie dolnym 11
+          X_{11}^3 - x o indeksie 11 i potędze 3
+
+FORMATOWANIE(TEKST PO LEWEJ, PRAWEJ, NA ŚRODKU) =>
+                    begin{flushleft}
+                         teskt do lewej
+                    end{flushleft}
+
+                    begin{center}
+                         test po środku
+                    end{center}
+                    
+                    begin{flushright}
+                         tekst do prawej
+                    end{flushright}
+FORMATOWANIE TESKTU =>
+               \textbf{teskt pogrubiony}
+               \textit{tekst pochylony}
+               \emph{test większą, grubszą czcionką}
+FORMATOWANIE WIELKOŚCI CZCIONKI =>
+               begin{tiny}
+                    teskt mniejszy od normalnej wielkości czcionki
+               end{tiny}
+               zamist tiny mozna dać kolejno : 
+                                   -tiny
+                                   -small
+                                   -normalsize
+                                   -large
+                                   -Large
+                                   -LARGE
+                                   -huge
+                                   -HUGE
+
+
+
+
+PISANIE WZORU MATEMATYCZNEGO => & WZÓR & - zapisuje wzór w tej samej lini co reszta tekstu
+                              => && WZÓR && - - zapisuje wzór w nowej linii, ogólna ekspozycja wzoru
+
+WZORY:
+     ZBIORY:
+          x należy do zbioru liczb naturalnych => $x \in \mathbb{N} $
+               \in - należdy do przedziału
+               \mathbb - czcionka dla zbiorów
+
+
+NOWA LINIA(ENTER) => \\ (2 RAZY BACKSLASH)
+AKAPIT => 2 RAZY ENTER
+ZNAKI SPECJALNE =>
+               &\backslash& - \
+               ogolnie zapis \{ poznawa na opuszczenie trybu matematycznego i wpisanie np po po prostu nawiasu
+               \%
+               \#
+
+LISTY NUMEROWANE I NIENUMEROWANE =>
+          \begin{enumerate}
+               \item - lista numerowana
+          \end{enumerate}
+
+          \begin{itemize}
+               \item - lista nienumerowana
+          \end{itemize}
+UKŁAD RÓWNAŃ =>
+     $$
+     \begin{cases}
+          x=x(t)
+          \\ %nowa linia
+          y=y()
+
+     \end{cases}
+     $$
+
+
+
+
+
+
+1 stronę tytułową zawierającą:
+     tytuł pracy
+     imię i nazwisko autora
+     datę
+     streszczenie pracy
+     małe zdjęcie autora pracy
+2 spis treści
+3 minimum 3 rozdziały (np. wstęp, rozwinięcie, zakończenie)
+4 znaki specjalne i symbole
+5 zastosowanie różnego rodzaju fontów (duży i mały tekst, pogrubienie, podkreślenie, itp.)
+6 tabelkę zawierającą:
+          min. 3 kolumny i 5 wierszy
+          opis
+          wzór matematyczny
+7 minimum 3 wzory matematyczne (z czego jeden zagnieżdżony w tekście) posiadające:
+          litery greckie
+          funkcje matematyczne
+          operatory matematyczne
+8. odsyłacze do tabel, rysunków oraz stron internetowych
+9.   minimum 2 elementy graficzne:
+     jeden wykonany własnoręcznie przy użyciu programu gnuplot
+     drugi, np. przerobione w dowolny sposób dowolne zdjęcie
+10 bibliografię

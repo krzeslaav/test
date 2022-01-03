@@ -71,43 +71,55 @@ btnCss.addEventListener("click",(e)=>{
 //CARD SWITCHER
 const arrLeft = document.querySelector(".arr-left")
 const arrRight = document.querySelector(".arr-right")
-const cards = document.querySelectorAll(".card")
-arrLeft.addEventListener("click",()=>{
-     let card = document.querySelector(".card");
+const cards = document.querySelector(".cards");
+let btnLeft = ()=>{
 
-          let currentCard = card.classList[1];
+}
 
-          let regex = /\d+/g;
-          let matches = currentCard.match(regex);
-          currentCard= parseInt(matches[0])
-          currentCard--
-          console.log(currentCard)
-          if(currentCard<0){
-               currentCard = parseInt(cards.length)-1;
-          }
-          console.log(currentCard,"nr karty")
-          card.classList.add("d_none");
-          
-          cards[currentCard].classList.remove("d_none")
-          // console.log(cards[currentCard].classList) 
-         
-})
-
+let cardShowing = 0;
 arrRight.addEventListener("click",()=>{
-     console.log("rigt")
-     let card = document.querySelector(".card");
-     if(!card.classList.contains("d_none")){
-          
-          let currentCard = card.classList[1];
+     let card = document.querySelectorAll(".card")
+     tempCard = cardShowing
+     
+     let bgCol;     
 
-          let regex = /\d+/g;
-          let matches = currentCard.match(regex);
-          currentCard= parseInt(matches[0])
-          currentCard++
-          card.classList.add("d_none");
-          
-          cards[currentCard].classList.remove("d_none")
-          console.log(cards[currentCard].classList) 
-         }
+     if(cardShowing >= 3){
+          card[tempCard].classList.add("d_none")
+          cardShowing = 0
+          tempCard = 0
+          card[tempCard].classList.remove("d_none")
+
+          bgCol = card[cardShowing].children[0].attributes[1].value;
+          cards.style.background = bgCol;
+     } else{
+          card[cardShowing].classList.add("d_none")
+          tempCard ++;
+          card[tempCard].classList.remove("d_none")
+          cardShowing++;
+
+          bgCol = card[cardShowing].children[0].attributes[1].value;
+          cards.style.background = bgCol;
+     }
+})
+arrLeft.addEventListener("click",()=>{
+     let card = document.querySelectorAll(".card")
+     tempCard = cardShowing
+     let bgCol;
+     if(cardShowing == 0){
+          card[cardShowing].classList.add("d_none")
+          cardShowing = 3
+          card[cardShowing].classList.remove("d_none")
+          bgCol = card[cardShowing].children[0].attributes[1].value;
+          cards.style.background = bgCol;
+           
+     }else{
+      card[cardShowing].classList.add("d_none")
+          tempCard --;
+          card[tempCard].classList.remove("d_none")
+          cardShowing--;
+
+          bgCol = card[cardShowing].children[0].attributes[1].value;
+          cards.style.background = bgCol;
+     }
 })
 
