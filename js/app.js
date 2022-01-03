@@ -66,21 +66,16 @@ btnCss.addEventListener("click",(e)=>{
 
      }
 })
-//update
 
 //CARD SWITCHER
 const arrLeft = document.querySelector(".arr-left")
 const arrRight = document.querySelector(".arr-right")
 const cards = document.querySelector(".cards");
-let btnLeft = ()=>{
-
-}
-
 let cardShowing = 0;
 arrRight.addEventListener("click",()=>{
      let card = document.querySelectorAll(".card")
      tempCard = cardShowing
-     
+
      let bgCol;     
 
      if(cardShowing >= 3){
